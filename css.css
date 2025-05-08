@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Главный экран */
+.start-screen {
+  height: 100vh;
+  background-color: black;
+  color: white;
+  transition: background-color 1s ease;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Боковое меню */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -270px;
+  width: 250px;
+  height: 100%;
+  background-color: #111;
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+/* Цвет и обводка бургер-кнопки при белом фоне */
+.navbar-light .navbar-toggler {
+  border-color: black;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+/* Карточки */
+.card {
+  border-radius: 1rem;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+
+
+.extra {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  border-left: 5px solid #5b9bd5;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.extra:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
